@@ -42,6 +42,8 @@ O Postman deve salvar este cookie automaticamente. Você pode verificar isso da 
 Após receber a resposta de login, clique na aba "Cookies" logo abaixo da barra de URL no Postman.
 Você deverá ver o cookie de sessão listado para o domínio do seu aplicativo.
 
+# Observação: A solicitação POST no login me permite enviar meu nome de usuário e senha para liberar o acesso e, em seguida, fazer solicitações, se autorizadas, usando o método GET.
+
 ## Habilitar admin
 
 ![/login para admin](Images/Pruebas_Postman/Postman_POST_em_login_para_liberar_acesso-ROLE_ADMIN-com-clave-valor-certo.png)
