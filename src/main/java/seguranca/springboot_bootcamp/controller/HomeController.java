@@ -34,4 +34,5 @@ public class HomeController {
     public String loginPage() {
         return "login"; // Assumes you have a login.html in src/main/resources/templates
     }
+        
 }
