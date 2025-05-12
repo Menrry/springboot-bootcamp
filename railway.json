@@ -2,3 +2,4 @@
   "buildCommand": "./mvnw clean package -DskipTests",
   "startCommand": "java -jar target/springboot-bootcamp.jar"
 }
+
