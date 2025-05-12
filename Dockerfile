@@ -1,11 +1,21 @@
-FROM maven:3.9.0-eclipse-temurin-17-alpine AS build
+# Usamos una imagen base con JDK 17
+FROM eclipse-temurin:17-jdk-alpine
+
 WORKDIR /app
+
+# Copiamos todo el proyecto
 COPY . .
+
+# Damos permisos de ejecución al mvnw
 RUN chmod +x mvnw
+
+# Construimos el proyecto sin tests
 RUN ./mvnw clean package -DskipTests
 
-FROM eclipse-temurin:17-jre-alpine
-WORKDIR /app
-COPY --from=build /app/target/*.jar app.jar
+# Exponemos el puerto (opcional, Railway lo asigna dinámicamente)
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","app.jar"]
+
+# Comando para ejecutar la aplicación
+CMD ["java", "-jar", "target/springboot-railway-0.0.1-SNAPSHOT.jar"]
+
+
