@@ -1,4 +1,4 @@
 {
-  "buildCommand": "./mvnw -DskipTests clean install",
-  "installCommand": "echo 'Skipping npm install'"
+  "buildCommand": "./mvnw clean package -DskipTests",
+  "startCommand": "java -jar target/springboot-bootcamp.jar"
 }
