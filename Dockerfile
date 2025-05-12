@@ -14,4 +14,5 @@ RUN chmod +x mvnw
 RUN ./mvnw -DoutputFile=target/mvn-dependency-list.log -B -DskipTests clean dependency:list install
 
 # Run the app by dynamically finding the JAR file in the target directory
-CMD ["java", "-jar", "target/spring-security-postgres-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "target/springboot-bootcamp.jar"]
+
